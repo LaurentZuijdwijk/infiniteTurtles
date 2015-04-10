@@ -1,0 +1,27 @@
+{
+  "name": "InfiniteTurtles",
+  "main": "./dist/index.js",
+  "version": "0.0.5",
+  "authors": [
+    "Laurent Zuijdwijk"
+  ],
+  "description": "Turtle drawing library",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "canvas",
+    "turtle",
+    "drawing"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
