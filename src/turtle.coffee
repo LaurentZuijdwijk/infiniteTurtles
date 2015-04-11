@@ -1,7 +1,7 @@
 
 umd = (factory) ->
 	if typeof exports is 'object'
-		module.exports = factory(require('./turtle-drawer'))
+		module.exports = factory(require('./drawers/turtle-drawer'))
 	else if typeof define is 'function' and define.amd
 		define(['turtle-drawer'], factory)
 	else

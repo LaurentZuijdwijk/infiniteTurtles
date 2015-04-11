@@ -1,6 +1,4 @@
 
-
-
 var gulp = require('gulp'),
 
 	coffee = require('gulp-coffee'),
@@ -9,7 +7,7 @@ var gulp = require('gulp'),
 	umd = require('gulp-umd'),
 
 	paths = {
-		coffeescripts: ['src/color.coffee', 'src/turtle-drawer.coffee', 'src/turtle.coffee','src/**/*.coffee']
+		coffeescripts: ['src/color.coffee', 'src/drawers/turtle-drawer.coffee', 'src/turtle.coffee','src/**/*.coffee']
 	};
 
 gulp.task('coffeescripts', function() {
