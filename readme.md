@@ -8,7 +8,7 @@ Installation
 
 Easy to install with NPM:
 
-```nmp i infinite-turtles```
+```npm install infinite-turtles```
 
 How to use?
 -----------
