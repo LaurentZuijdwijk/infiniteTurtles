@@ -1,0 +1,32 @@
+<html>
+	<script src="dist/turtle.min.js"></script>
+	<canvas id="turtle" width="500" height="500"></canvas>
+	<script>
+
+	var turtle = new TURTLE.Turtle('turtle');
+
+	turtle.background('#000');
+
+	turtle.drawer.setX(130)
+	turtle.drawer.setY(130)
+
+	turtle.drawer.angle = Math.random()*360
+
+	turtle.lineWidth( 20);
+
+	turtle.color(new TURTLE.Color(255,100,0,1))
+	
+	turtle.forward(10 )
+	turtle.turn(92)
+	turtle.forward(10 )
+	turtle.turn(-90)
+	turtle.draw(100)
+
+
+
+
+	</script>
+
+
+
+</html>

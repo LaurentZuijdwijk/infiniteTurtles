@@ -5,8 +5,8 @@ umd = (factory) ->
 	else if typeof define is 'function' and define.amd
 		define(['turtle-drawer'], factory)
 	else
-		@turtle = @turtle || {}
-		@turtle.Turtle = factory(@turtle.TurtleDrawer)
+		@TURTLE = @TURTLE || {}
+		@TURTLE.Turtle = factory(@TURTLE.TurtleDrawer)
  
 
 umd (TurtleDrawer)->

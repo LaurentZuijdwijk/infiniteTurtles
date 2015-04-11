@@ -5,8 +5,8 @@ umd = (factory) ->
 	else if typeof define is 'function' and define.amd
 		define(['color'], factory)
 	else
-		@turtle = @turtle || {}
-		@turtle.TurtleDrawer = factory(@turtle.Color)
+		@TURTLE = @TURTLE || {}
+		@TURTLE.TurtleDrawer = factory(@TURTLE.Color)
  
 
 umd (Color)->
@@ -104,3 +104,4 @@ umd (Color)->
 				@drawers[2].moveY( y+@offsetY*2, mod)
 				@
 			@
+	return TurtleDrawer

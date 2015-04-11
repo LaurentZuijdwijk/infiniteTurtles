@@ -4,8 +4,8 @@ umd = (factory) ->
 	else if typeof define is 'function' and define.amd
 		define([], factory)
 	else
-		@turtle = @turtle || {}
-		@turtle.Color = factory()
+		@TURTLE = @TURTLE || {}
+		@TURTLE.Color = factory()
  
 
 umd ()->
