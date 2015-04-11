@@ -16,9 +16,20 @@ gulp.task('coffeescripts', function() {
 		.pipe(concat('turtle.min.coffee'))
 		.pipe(coffee())
 		//.pipe(umd())
-//		.pipe(uglify())
+		.pipe(uglify())
 	.pipe(gulp.dest('dist'));
 });
+
+gulp.task('build', function() {
+	// Minify and copy all JavaScript (except vendor scripts)
+	return gulp.src(paths.coffeescripts)
+		
+		.pipe(coffee())
+		//.pipe(umd())
+
+	.pipe(gulp.dest('dist'));
+});
+
 
 
 // Rerun the task when a file changes
@@ -27,4 +38,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['coffeescripts']);
+gulp.task('default', ['coffeescripts', 'build']);
