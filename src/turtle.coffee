@@ -11,8 +11,7 @@ umd = (factory) ->
 
 umd (TurtleDrawer)->
 	class Turtle
-		constructor : (@canvasId)->
-			@canvas = document.getElementById(@canvasId)
+		constructor : (@canvas)->
 
 			@ctx = @canvas.getContext('2d')
 			@ctx.globalCompositeOperation = "screen";

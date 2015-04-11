@@ -3,7 +3,9 @@
 	<canvas id="turtle" width="500" height="500"></canvas>
 	<script>
 
-	var turtle = new TURTLE.Turtle('turtle');
+	var canvas = document.getElementById('turtle');
+
+	var turtle = new TURTLE.Turtle(canvas);
 
 	turtle.background('#000');
 
