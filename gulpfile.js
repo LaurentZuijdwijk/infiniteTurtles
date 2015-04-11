@@ -1,22 +1,24 @@
 
-var gulp, coffee, uglify, zip, sourcemaps, paths, shell;
 
-gulp = require('gulp');
 
-coffee = require('gulp-coffee');
-concat = require('gulp-concat');
-uglify = require('gulp-uglify');
+var gulp = require('gulp'),
 
-paths = {
-	coffeescripts: ['src/color.coffee', 'src/turtle.coffee','src/**/*.coffee']
-};
+	coffee = require('gulp-coffee'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
+	umd = require('gulp-umd'),
+
+	paths = {
+		coffeescripts: ['src/color.coffee', 'src/turtle-drawer.coffee', 'src/turtle.coffee','src/**/*.coffee']
+	};
 
 gulp.task('coffeescripts', function() {
 	// Minify and copy all JavaScript (except vendor scripts)
 	return gulp.src(paths.coffeescripts)
 		.pipe(concat('turtle.min.coffee'))
 		.pipe(coffee())
-		.pipe(uglify())
+		//.pipe(umd())
+//		.pipe(uglify())
 	.pipe(gulp.dest('dist'));
 });
 
