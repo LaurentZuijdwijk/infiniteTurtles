@@ -1,7 +1,7 @@
 
 umd = (factory) ->
 	if typeof exports is 'object'
-		module.exports = factory(require('./color'))
+		module.exports = factory(require('../color'))
 	else if typeof define is 'function' and define.amd
 		define(['color'], factory)
 	else

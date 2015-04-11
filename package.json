@@ -1,6 +1,6 @@
 {
   "name": "infinite-turtles",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Turtle drawing library",
   "main": "index.js",
   "scripts": {

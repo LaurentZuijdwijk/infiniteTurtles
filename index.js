@@ -1,7 +1,7 @@
 
 exports.Color = require('./src/color');
+exports.TurtleDrawer = require('./src/drawers/turtle-drawer');
 exports.Turtle = require('./src/turtle');
-exports.TurtleDrawer = require('./src/turtle-drawer');
 
 
 
