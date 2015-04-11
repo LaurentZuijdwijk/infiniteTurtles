@@ -1,6 +1,6 @@
 
 var gulp = require('gulp'),
-
+	clean = require('gulp-clean'),
 	coffee = require('gulp-coffee'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
@@ -9,6 +9,14 @@ var gulp = require('gulp'),
 	paths = {
 		coffeescripts: ['src/color.coffee', 'src/drawers/turtle-drawer.coffee', 'src/turtle.coffee','src/**/*.coffee']
 	};
+
+
+ 
+gulp.task('clean', function () {
+  return gulp.src('dist/**/*.js', {read: false})
+    .pipe(clean());
+});
+
 
 gulp.task('coffeescripts', function() {
 	// Minify and copy all JavaScript (except vendor scripts)
@@ -22,7 +30,7 @@ gulp.task('coffeescripts', function() {
 
 gulp.task('build', function() {
 	// Minify and copy all JavaScript (except vendor scripts)
-	return gulp.src(paths.coffeescripts)
+	return gulp.src('./src/**/*.coffee')
 		
 		.pipe(coffee())
 		//.pipe(umd())
@@ -38,4 +46,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['coffeescripts', 'build']);
+gulp.task('default', ['clean', 'coffeescripts', 'build']);
