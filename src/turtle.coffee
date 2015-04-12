@@ -11,16 +11,20 @@ umd = (factory) ->
 
 umd (TurtleDrawer)->
 	class Turtle
+
 		constructor : (@canvas)->
 
 			@ctx = @canvas.getContext('2d')
-			@ctx.globalCompositeOperation = "screen";
+			@ctx.globalCompositeOperation = "source-over";
 
 			@drawer = new TurtleDrawer(@canvas);
 			# @drawer = new OffsetColorDrawer(@canvas);				
 				
 			@commands = []
 
+
+		setBlendMode : (val)->
+			@ctx.globalCompositeOperation = val;
 
 		background : (val)->
 			w = @canvas.width
@@ -112,3 +116,23 @@ umd (TurtleDrawer)->
 		finish :()->
 			@drawer.finish()
 			@
+		blendMode ={
+			'NORMAL' : 'normal'
+			'MULTIPLY' : 'multiply'
+			'SCREEN' : 'screen'
+			'OVERLAY' : 'overlay'
+			'DARKEN' : 'darken'
+			'LIGHTEN' : 'lighten'
+			'COLOR-DODGE' : 'color-dodge'
+			'COLOR-BURN' : 'color-burn'
+			'HARD-LIGHT' : 'hard-light'
+			'SOFT-LIGHT' : 'soft-light'
+			'DIFFERENCE' :'difference'
+			'EXCLUSION' : 'exclusion'
+			'HUE' : 'hue'
+			'SATURATION' : 'saturation'
+			'COLOR' :'color'
+			'LUMINOSITY' : 'luminosity'
+
+		}	
+
