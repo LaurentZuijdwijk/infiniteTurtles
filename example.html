@@ -9,23 +9,33 @@
 
 	turtle.background('#000');
 
-	turtle.drawer.setX(130)
-	turtle.drawer.setY(130)
+	turtle.drawer.setX(50)
+	turtle.drawer.setY(5)
 
-	turtle.drawer.angle = Math.random()*360
+	turtle.drawer.angle = 0;
 
-	turtle.lineWidth( 20);
+	turtle.lineWidth(5);
 
-	turtle.color(new TURTLE.Color(255,100,0,1))
-	
-	turtle.forward(10 )
-	turtle.turn(92)
-	turtle.forward(10 )
-	turtle.turn(-90)
+	turtle.color(new TURTLE.Color(255,100,0,0.31))
+	turtle.moveY(0.5)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+	turtle.forward(50, function(i){return i *3} )
+	turtle.turn(45)
+
 	turtle.draw(100)
-
-
-
 
 	</script>
 

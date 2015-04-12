@@ -16,13 +16,12 @@
   umd(function(TurtleDrawer) {
     var Turtle;
     return Turtle = (function() {
-      function Turtle(canvasId) {
-        this.canvasId = canvasId;
+      function Turtle(canvas) {
+        this.canvas = canvas;
         this.keepDrawing = bind(this.keepDrawing, this);
         this.doDraw = bind(this.doDraw, this);
         this.draw = bind(this.draw, this);
         this.job = bind(this.job, this);
-        this.canvas = document.getElementById(this.canvasId);
         this.ctx = this.canvas.getContext('2d');
         this.ctx.globalCompositeOperation = "screen";
         this.drawer = new TurtleDrawer(this.canvas);

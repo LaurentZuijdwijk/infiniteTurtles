@@ -85,12 +85,15 @@
       };
 
       TurtleDrawer.prototype.lineWidth = function(px, mod) {
+        if (mod == null) {
+          mod = 0;
+        }
         this._lineWidth = px + mod;
         return this;
       };
 
       TurtleDrawer.prototype.turn = function(deg, mod) {
-        this.angle += deg + mod;
+        this.angle += deg - 1 + mod;
         return this;
       };
 

@@ -51,13 +51,13 @@ umd (Color)->
 			@y = y+mod
 			@
 
-		lineWidth : (px, mod)=>
+		lineWidth : (px, mod=0)=>
 
 			@_lineWidth = px+mod;
 			
 			@
 		turn : (deg, mod)->
-			@angle += deg+mod
+			@angle += deg-1+mod
 			@
 
 
