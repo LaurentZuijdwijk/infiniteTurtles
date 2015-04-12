@@ -16,6 +16,8 @@
   umd(function(TurtleDrawer) {
     var Turtle;
     return Turtle = (function() {
+      var blendMode;
+
       function Turtle(canvas) {
         this.canvas = canvas;
         this.keepDrawing = bind(this.keepDrawing, this);
@@ -23,10 +25,14 @@
         this.draw = bind(this.draw, this);
         this.job = bind(this.job, this);
         this.ctx = this.canvas.getContext('2d');
-        this.ctx.globalCompositeOperation = "screen";
+        this.ctx.globalCompositeOperation = "source-over";
         this.drawer = new TurtleDrawer(this.canvas);
         this.commands = [];
       }
+
+      Turtle.prototype.setBlendMode = function(val) {
+        return this.ctx.globalCompositeOperation = val;
+      };
 
       Turtle.prototype.background = function(val) {
         var h, w;
@@ -200,6 +206,25 @@
       Turtle.prototype.finish = function() {
         this.drawer.finish();
         return this;
+      };
+
+      blendMode = {
+        'NORMAL': 'normal',
+        'MULTIPLY': 'multiply',
+        'SCREEN': 'screen',
+        'OVERLAY': 'overlay',
+        'DARKEN': 'darken',
+        'LIGHTEN': 'lighten',
+        'COLOR-DODGE': 'color-dodge',
+        'COLOR-BURN': 'color-burn',
+        'HARD-LIGHT': 'hard-light',
+        'SOFT-LIGHT': 'soft-light',
+        'DIFFERENCE': 'difference',
+        'EXCLUSION': 'exclusion',
+        'HUE': 'hue',
+        'SATURATION': 'saturation',
+        'COLOR': 'color',
+        'LUMINOSITY': 'luminosity'
       };
 
       return Turtle;
