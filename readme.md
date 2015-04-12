@@ -16,7 +16,8 @@ How to use?
 You can use it with AMD, CommonJS or globals. 
 
 ```
-var turtle = new TURTLE.Turtle('turtle');
+var canvas = document.getElementById('myCanvas');
+var turtle = new TURTLE.Turtle(canvas);
 
 turtle.background('#000');
 
