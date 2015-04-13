@@ -16,10 +16,10 @@
     var Color;
     return Color = Color = (function() {
       function Color(r1, g1, b1, opacity) {
-        this.r = r1;
-        this.g = g1;
-        this.b = b1;
-        this.opacity = opacity != null ? opacity : 1;
+        this.r = r1 != null ? r1 : 0;
+        this.g = g1 != null ? g1 : 0;
+        this.b = b1 != null ? b1 : 0;
+        this.opacity = opacity != null ? opacity : 1.0;
         this;
       }
 

@@ -16,8 +16,6 @@
   umd(function(TurtleDrawer) {
     var Turtle;
     return Turtle = (function() {
-      var blendMode;
-
       function Turtle(canvas) {
         this.canvas = canvas;
         this.keepDrawing = bind(this.keepDrawing, this);
@@ -208,7 +206,7 @@
         return this;
       };
 
-      blendMode = {
+      Turtle.blendMode = {
         'NORMAL': 'normal',
         'MULTIPLY': 'multiply',
         'SCREEN': 'screen',

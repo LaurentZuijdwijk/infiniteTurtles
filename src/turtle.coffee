@@ -116,7 +116,7 @@ umd (TurtleDrawer)->
 		finish :()->
 			@drawer.finish()
 			@
-		blendMode ={
+		@blendMode ={
 			'NORMAL' : 'normal'
 			'MULTIPLY' : 'multiply'
 			'SCREEN' : 'screen'

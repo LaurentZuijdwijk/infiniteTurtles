@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Chrome 41.0.2272 (Windows 8.1)" package="unit" timestamp="2015-04-13T08:28:16" id="0" hostname="mine" tests="6" errors="0" failures="0" time="0.004">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"/>
+    </properties>
+    <testcase name="should be defined" time="0.001" classname="unit Chrome 41.0.2272 (Windows 8.1).color class"/>
+    <testcase name="should stingify" time="0.001" classname="unit Chrome 41.0.2272 (Windows 8.1).color class"/>
+    <testcase name="should convert to HSL" time="0.001" classname="unit Chrome 41.0.2272 (Windows 8.1).color class"/>
+    <testcase name="should convert from HSL" time="0" classname="unit Chrome 41.0.2272 (Windows 8.1).color class"/>
+    <testcase name="should have getHue function" time="0.001" classname="unit Chrome 41.0.2272 (Windows 8.1).color class"/>
+    <testcase name="should have setHue function" time="0" classname="unit Chrome 41.0.2272 (Windows 8.1).color class"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

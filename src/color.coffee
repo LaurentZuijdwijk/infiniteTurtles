@@ -11,7 +11,7 @@ umd = (factory) ->
 umd ()->
 
 	Color = class Color
-		constructor :(@r,@g,@b,@opacity = 1)->
+		constructor :(@r=0, @g=0, @b=0, @opacity = 1.0)->
 			@
 		toString : ()->
 			"rgba(#{@r},#{@g},#{@b},#{@opacity})"
